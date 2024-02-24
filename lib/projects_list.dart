@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:universal_html/html.dart' as html;
-import 'constants.dart';
 import 'package:path/path.dart' as p;
+import 'package:universal_html/html.dart' as html;
+
+import 'constants.dart';
+import 'repositories.dart';
 
 class ProjectsList extends StatelessWidget {
   const ProjectsList({super.key});
@@ -9,9 +11,9 @@ class ProjectsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: kRepos.length,
+      itemCount: repositories.length,
       itemBuilder: (context, index) {
-        final repo = kRepos.elementAt(index);
+        final repo = repositories.elementAt(index);
         return ListTile(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
@@ -19,8 +21,8 @@ class ProjectsList extends StatelessWidget {
           title: Text(repo.$2),
           subtitle: Text(repo.$3),
           trailing: Text(repo.$1),
-          onTap: () => html.window
-              .open(p.join('https://github.com', repo.$1, repo.$2), ''),
+          onTap: () =>
+              html.window.open(p.join(kGitHubPrefix, repo.$1, repo.$2), ''),
         );
       },
     );
