@@ -40,17 +40,20 @@ class _ContributorGridState extends State<ContributorGrid> {
           borderRadius: BorderRadius.circular(kAvatarSize * 2),
           onTap:
               e.htmlUrl == null ? null : () => launchUrl(Uri.parse(e.htmlUrl!)),
-          child: CircleAvatar(
-            backgroundImage: e.avatarUrl != null
-                ? NetworkImage(
-                    e.avatarUrl!,
-                  )
-                : null,
-            child: e.avatarUrl == null
-                ? const YaruPlaceholderIcon(
-                    size: Size.square(kAvatarSize),
-                  )
-                : null,
+          child: Tooltip(
+            message: e.login,
+            child: CircleAvatar(
+              backgroundImage: e.avatarUrl != null
+                  ? NetworkImage(
+                      e.avatarUrl!,
+                    )
+                  : null,
+              child: e.avatarUrl == null
+                  ? const YaruPlaceholderIcon(
+                      size: Size.square(kAvatarSize),
+                    )
+                  : null,
+            ),
           ),
         );
       },
