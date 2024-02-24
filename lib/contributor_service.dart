@@ -1,5 +1,6 @@
 import 'package:github/github.dart';
-import 'constants.dart';
+
+import 'repositories.dart';
 
 class ContributorService {
   ContributorService({required GitHub gitHub}) : _gitHub = gitHub;
@@ -8,14 +9,14 @@ class ContributorService {
   List<Contributor> get contributors => _contributors ?? [];
 
   Future<bool> init() async {
-    _contributors = await getContributors();
+    _contributors ??= await getContributors();
     return true;
   }
 
   Future<List<Contributor>> getContributors() async {
     final allContributors = <Contributor>{};
 
-    for (var repo in kRepos) {
+    for (var repo in repositories) {
       for (var e in (await _getRepoContributors(repo.$1, repo.$2))) {
         if (!allContributors.any((c) => e.id == c.id)) {
           allContributors.add(e);
