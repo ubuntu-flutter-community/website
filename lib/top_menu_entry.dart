@@ -15,14 +15,11 @@ class TopMenuEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(right: padding),
-      child: TextButton(
-        onPressed: onPressed,
-        child: Text(
-          text,
-          style: context.theme.textTheme.headlineSmall,
-        ),
+    return TextButton(
+      onPressed: onPressed,
+      child: Text(
+        text,
+        style: context.theme.textTheme.headlineSmall,
       ),
     );
   }

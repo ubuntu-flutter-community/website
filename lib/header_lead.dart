@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:website/constants.dart';
 import 'package:website/logo.dart';
-import 'package:yaru_widgets/constants.dart';
 
 class HeaderLead extends StatelessWidget {
   const HeaderLead({
@@ -13,7 +13,7 @@ class HeaderLead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(left: kYaruPagePadding),
+      padding: EdgeInsets.only(left: kPadding),
       child: Logo(
         size: 100,
         duration: Duration.zero,

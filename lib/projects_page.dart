@@ -6,6 +6,7 @@ import 'package:website/header_title.dart';
 import 'package:website/message_fab.dart';
 import 'package:website/scaffold_gradient.dart';
 import 'package:website/top_menu_entry.dart';
+import 'package:yaru_widgets/constants.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -29,10 +30,16 @@ class ProjectsPage extends StatelessWidget {
               text: 'Home',
               onPressed: () => Navigator.of(context).pushNamed('/'),
             ),
+            const SizedBox(
+              width: kYaruPagePadding,
+            ),
             TopMenuEntry(
               text: 'GitHub',
               onPressed: () => html.window.open(kGitHubOrgaLink, ''),
             ),
+            const SizedBox(
+              width: kPadding,
+            )
           ],
         ),
         body: const SizedBox.shrink(),
