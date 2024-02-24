@@ -54,11 +54,14 @@ class _ContributorGridState extends State<ContributorGrid> {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Center(
-            child: Text(snapshot.error.toString()),
+            child: Padding(
+              padding: const EdgeInsets.all(kYaruPagePadding),
+              child: Text(snapshot.error.toString()),
+            ),
           );
         } else if (!snapshot.hasData) {
           return const Center(
-            child: Logo(duration: Duration(seconds: 1)),
+            child: Logo(duration: Duration(seconds: 5)),
           );
         }
 

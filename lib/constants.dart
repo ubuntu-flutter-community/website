@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yaru_widgets/constants.dart';
 
-const kToolBarHeight = 140.0;
+const kToolBarHeight = 110.0;
 const kLeadingWidth = 85.0;
 const kListTilePadding =
     EdgeInsets.only(left: kYaruPagePadding, right: kYaruPagePadding);

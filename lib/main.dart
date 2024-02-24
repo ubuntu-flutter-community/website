@@ -4,7 +4,7 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:website/constants.dart';
 import 'package:website/globals.dart';
 import 'package:website/home_page.dart';
-import 'package:website/team_page.dart';
+import 'package:website/projects_page.dart';
 import 'package:yaru/yaru.dart';
 
 Future<void> main() async {
@@ -18,16 +18,41 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var pTT = PageTransitionsTheme(
+      builders: {
+        for (final platform in TargetPlatform.values)
+          platform: const _NoTransitionsBuilder(),
+      },
+    );
     return MaterialApp(
       title: kTitle,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      theme: yaruLight,
-      darkTheme: yaruDark,
+      theme: yaruLight.copyWith(
+        pageTransitionsTheme: pTT,
+      ),
+      darkTheme: yaruDark.copyWith(
+        pageTransitionsTheme: pTT,
+      ),
       routes: {
         '/': (context) => const HomePage(),
-        '/team': (context) => const TeamPage(),
+        '/projects': (context) => const ProjectsPage(),
       },
     );
+  }
+}
+
+class _NoTransitionsBuilder extends PageTransitionsBuilder {
+  const _NoTransitionsBuilder();
+
+  @override
+  Widget buildTransitions<T>(
+    PageRoute<T>? route,
+    BuildContext? context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget? child,
+  ) {
+    return child!;
   }
 }

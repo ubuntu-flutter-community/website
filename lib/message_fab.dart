@@ -3,6 +3,7 @@ import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:website/constants.dart';
 import 'package:website/expandable_fab.dart';
+import 'package:yaru_icons/yaru_icons.dart';
 
 class MessageFab extends StatelessWidget {
   const MessageFab({
@@ -12,6 +13,7 @@ class MessageFab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpandableFab(
+      baseIcon: YaruIcons.send_filled,
       distance: 112,
       children: [
         ActionButton(

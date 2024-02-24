@@ -9,11 +9,13 @@ class ExpandableFab extends StatefulWidget {
     this.initialOpen,
     required this.distance,
     required this.children,
+    required this.baseIcon,
   });
 
   final bool? initialOpen;
   final double distance;
   final List<Widget> children;
+  final IconData baseIcon;
 
   @override
   State<ExpandableFab> createState() => _ExpandableFabState();
@@ -133,7 +135,7 @@ class _ExpandableFabState extends State<ExpandableFab>
           duration: const Duration(milliseconds: 250),
           child: FloatingActionButton(
             onPressed: _toggle,
-            child: const Icon(YaruIcons.mail),
+            child: Icon(widget.baseIcon),
           ),
         ),
       ),

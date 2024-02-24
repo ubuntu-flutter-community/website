@@ -26,12 +26,12 @@ class HomePage extends StatelessWidget {
           title: const HeaderTitle(),
           actions: [
             TopMenuEntry(
-              text: 'GitHub',
-              onPressed: () => html.window.open(kGitHubOrgaLink, ''),
+              text: 'Projects',
+              onPressed: () => Navigator.of(context).pushNamed('/projects'),
             ),
             TopMenuEntry(
-              text: 'Team',
-              onPressed: () => Navigator.of(context).pushNamed('/team'),
+              text: 'GitHub',
+              onPressed: () => html.window.open(kGitHubOrgaLink, ''),
             ),
           ],
         ),

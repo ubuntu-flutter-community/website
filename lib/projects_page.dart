@@ -7,8 +7,8 @@ import 'package:website/message_fab.dart';
 import 'package:website/scaffold_gradient.dart';
 import 'package:website/top_menu_entry.dart';
 
-class TeamPage extends StatelessWidget {
-  const TeamPage({super.key});
+class ProjectsPage extends StatelessWidget {
+  const ProjectsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class TeamPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           toolbarHeight: kToolBarHeight,
           leadingWidth: kLeadingWidth,
           leading: const HeaderLead(
@@ -25,12 +26,12 @@ class TeamPage extends StatelessWidget {
           title: const HeaderTitle(),
           actions: [
             TopMenuEntry(
-              text: 'GitHub',
-              onPressed: () => html.window.open(kGitHubOrgaLink, ''),
-            ),
-            TopMenuEntry(
               text: 'Home',
               onPressed: () => Navigator.of(context).pushNamed('/'),
+            ),
+            TopMenuEntry(
+              text: 'GitHub',
+              onPressed: () => html.window.open(kGitHubOrgaLink, ''),
             ),
           ],
         ),
