@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/constants.dart';
-import 'package:website/logo.dart';
+import 'constants.dart';
+import 'logo.dart';
 
 class HeaderLead extends StatelessWidget {
   const HeaderLead({
@@ -12,11 +12,17 @@ class HeaderLead extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: kPadding),
-      child: Logo(
-        size: 100,
-        duration: Duration.zero,
+    return Padding(
+      padding: const EdgeInsets.only(left: kPadding),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: GestureDetector(
+          onTap: () => Navigator.of(context).pushNamed('/'),
+          child: const Logo(
+            size: 100,
+            duration: Duration.zero,
+          ),
+        ),
       ),
     );
   }

@@ -62,7 +62,7 @@ class _LogoState extends State<Logo> with SingleTickerProviderStateMixin {
               YaruIcons.ubuntu_logo_simple,
               size: (widget.size / 10) * 1.5,
             ),
-          )
+          ),
       ],
     );
   }

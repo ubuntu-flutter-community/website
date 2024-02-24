@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:universal_html/html.dart' as html;
-import 'package:website/constants.dart';
-import 'package:website/header_lead.dart';
-import 'package:website/header_title.dart';
-import 'package:website/message_fab.dart';
-import 'package:website/scaffold_gradient.dart';
-import 'package:website/top_menu_entry.dart';
-import 'package:yaru_widgets/constants.dart';
+
+import 'constants.dart';
+import 'header_lead.dart';
+import 'header_title.dart';
+import 'message_fab.dart';
+import 'projects_list.dart';
+import 'scaffold_gradient.dart';
+import 'top_menu_entry.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -17,33 +17,16 @@ class ProjectsPage extends StatelessWidget {
       decoration: scaffoldGradient(context),
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        floatingActionButton: const MessageFab(),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           toolbarHeight: kToolBarHeight,
           leadingWidth: kLeadingWidth,
-          leading: const HeaderLead(
-            insertBackButton: true,
-          ),
+          leading: const HeaderLead(),
           title: const HeaderTitle(),
-          actions: [
-            TopMenuEntry(
-              text: 'Home',
-              onPressed: () => Navigator.of(context).pushNamed('/'),
-            ),
-            const SizedBox(
-              width: kYaruPagePadding,
-            ),
-            TopMenuEntry(
-              text: 'GitHub',
-              onPressed: () => html.window.open(kGitHubOrgaLink, ''),
-            ),
-            const SizedBox(
-              width: kPadding,
-            )
-          ],
+          actions: createTopMenu(context),
         ),
-        body: const SizedBox.shrink(),
-        floatingActionButton: const MessageFab(),
+        body: const ProjectsList(),
       ),
     );
   }

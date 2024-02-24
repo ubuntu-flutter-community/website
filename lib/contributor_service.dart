@@ -1,5 +1,5 @@
 import 'package:github/github.dart';
-import 'package:website/constants.dart';
+import 'constants.dart';
 
 class ContributorService {
   ContributorService({required GitHub gitHub}) : _gitHub = gitHub;
@@ -27,7 +27,9 @@ class ContributorService {
   }
 
   Future<List<Contributor>> _getRepoContributors(
-      String owner, String name) async {
+    String owner,
+    String name,
+  ) async {
     return await (_gitHub.repositories)
         .listContributors(RepositorySlug(owner, name))
         .where((c) => c.type == 'User')

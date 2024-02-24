@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:github/github.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
-import 'package:website/constants.dart';
-import 'package:website/contributor_service.dart';
-import 'package:website/globals.dart';
-import 'package:website/home_page.dart';
-import 'package:website/projects_page.dart';
-import 'package:website/splash_screen.dart';
+import 'constants.dart';
+import 'contributor_service.dart';
+import 'globals.dart';
+import 'home_page.dart';
+import 'contributors_page.dart';
 import 'package:yaru/yaru.dart';
+
+import 'projects_page.dart';
 
 Future<void> main() async {
   registerService<ContributorService>(
@@ -25,20 +26,6 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
-  bool initialized = false;
-
-  @override
-  void initState() {
-    super.initState();
-    getService<ContributorService>().init().then(
-      (value) {
-        if (!initialized) {
-          setState(() => initialized = value);
-        }
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     var pTT = PageTransitionsTheme(
@@ -56,7 +43,8 @@ class _MainAppState extends State<MainApp> {
         pageTransitionsTheme: pTT,
       ),
       routes: {
-        '/': (context) => initialized ? const HomePage() : const SplashScreen(),
+        '/': (context) => const HomePage(),
+        '/contributors': (context) => const ContributorsPage(),
         '/projects': (context) => const ProjectsPage(),
       },
     );
