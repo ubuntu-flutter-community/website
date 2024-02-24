@@ -51,9 +51,7 @@ class _MainAppState extends State<MainApp> {
       title: kTitle,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      theme: yaruLight.copyWith(
-        pageTransitionsTheme: pTT,
-      ),
+      themeMode: ThemeMode.dark,
       darkTheme: yaruDark.copyWith(
         pageTransitionsTheme: pTT,
       ),
