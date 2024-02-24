@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yaru_icons/yaru_icons.dart';
 import 'package:yaru_widgets/constants.dart';
 
 const kPadding = 20.0;
@@ -9,33 +10,56 @@ const kListTilePadding =
 const kListIconPadding =
     EdgeInsets.only(bottom: 5, right: kYaruPagePadding + 2);
 final kListTileShape = RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(kYaruPagePadding / 2));
+  borderRadius: BorderRadius.circular(kYaruPagePadding / 2),
+);
 
 const kTitle = 'Ubuntu Flutter Community';
 
+const kUfcOrgaName = 'ubuntu-flutter-community';
+
+const kUbuntuOrganName = 'ubuntu';
+
 const kShortTitle = 'UFC';
 
-const kGitHubOrgaLink = 'https://github.com/ubuntu-flutter-community';
+const kGitHubPrefix = 'https://github.com';
 
-const kGitHubShortLink = 'ubuntu-flutter-community/musicpod';
+const kGitHubOrgaLink = '$kGitHubPrefix/$kUfcOrgaName';
 
-const kRepos = <(String, String)>{
-  ('ubuntu-flutter-community', 'musicpod'),
-  ('ubuntu-flutter-community', 'settings'),
-  ('ubuntu-flutter-community', 'envelope'),
-  ('canonical', 'ubuntu-desktop-installer'),
-  ('canonical', 'ubuntu-desktop-provision'),
-  ('canonical', 'desktop-security-center'),
-  ('canonical', 'firmware-updater'),
-  // ('canonical', 'dbus.dart'),
-  // ('ubuntu', 'yaru.dart'),
-  // ('ubuntu', 'yaru_widgets.dart'),
-  // ('ubuntu', 'yaru_icons.dart'),
-  // ('ubuntu', 'app-center.dart'),
+final kRepos = <(String, String, String, IconData)>{
+  (
+    kUfcOrgaName,
+    'musicpod',
+    'Local Music, Radio and Podcast Player',
+    YaruIcons.music_note,
+  ),
+  (
+    kUfcOrgaName,
+    'settings',
+    'Settings for the Ubuntu Desktop',
+    YaruIcons.settings,
+  ),
+  (
+    kUfcOrgaName,
+    'envelope',
+    'E-Mail app for the Ubuntu Desktop',
+    YaruIcons.mail,
+  ),
+  (
+    kUbuntuOrganName,
+    'yaru.dart',
+    'The iconic Flutter widget and theme suite for Ubuntu Desktop applications',
+    YaruIcons.music_note,
+  ),
+  (
+    kUbuntuOrganName,
+    'app-center',
+    'The app center of the Ubuntu Desktop',
+    YaruIcons.application_bag_filled,
+  ),
 };
 
 const kMail = 'mailto:frederik.feichtmeier@gmail.com';
 
 const kDiscordLink = 'https://discord.gg/vJgPV9Yn3n';
 
-const kAvatarSize = 80.0;
+const kAvatarSize = 60.0;

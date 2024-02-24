@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/logo.dart';
-import 'package:website/scaffold_gradient.dart';
+import 'logo.dart';
+import 'scaffold_gradient.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

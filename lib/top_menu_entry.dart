@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:website/build_context_x.dart';
+import 'package:universal_html/html.dart' as html;
+import 'constants.dart';
+
+import 'build_context_x.dart';
 
 class TopMenuEntry extends StatelessWidget {
   const TopMenuEntry({
@@ -19,8 +22,26 @@ class TopMenuEntry extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: context.theme.textTheme.headlineSmall,
+        style: context.theme.textTheme.bodyLarge,
       ),
     );
   }
 }
+
+List<Widget> createTopMenu(BuildContext context) => [
+      TopMenuEntry(
+        text: 'Projects',
+        onPressed: () => Navigator.of(context).pushNamed('/projects'),
+      ),
+      TopMenuEntry(
+        text: 'Contributors',
+        onPressed: () => Navigator.of(context).pushNamed('/contributors'),
+      ),
+      TopMenuEntry(
+        text: 'GitHub',
+        onPressed: () => html.window.open(kGitHubOrgaLink, ''),
+      ),
+      const SizedBox(
+        width: kPadding,
+      ),
+    ];
