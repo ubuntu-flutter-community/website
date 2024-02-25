@@ -26,7 +26,7 @@ final repositories = <(String, String, String, IconData)>{
     kUbuntuOrganName,
     'yaru.dart',
     'The iconic Flutter widget and theme suite for Ubuntu Desktop applications',
-    YaruIcons.music_note,
+    YaruIcons.color_select,
   ),
   (
     kUbuntuOrganName,

@@ -34,3 +34,7 @@ const kGitHubOrgaLink = '$kGitHubPrefix/$kUfcOrgaName';
 const kMail = 'mailto:frederik.feichtmeier@gmail.com';
 
 const kDiscordLink = 'https://discord.gg/vJgPV9Yn3n';
+
+const kWelcomeTitle = 'Changing the Ubuntu Desktop to a fluttery future';
+
+const kWelcomeButtonText = 'See our projects';
