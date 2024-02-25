@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as p;
 import 'package:universal_html/html.dart' as html;
-import 'package:yaru_icons/yaru_icons.dart';
 
 import 'build_context_x.dart';
 import 'constants.dart';
