@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
+import 'foot_note.dart';
 import 'header_lead.dart';
 import 'header_title.dart';
 import 'message_fab.dart';
@@ -16,6 +17,7 @@ class ProjectsPage extends StatelessWidget {
     return Container(
       decoration: scaffoldGradient(context),
       child: Scaffold(
+        bottomNavigationBar: const FootNote(),
         backgroundColor: Colors.transparent,
         floatingActionButton: const MessageFab(),
         appBar: AppBar(

@@ -20,7 +20,13 @@ class ProjectsList extends StatelessWidget {
           leading: Icon(repo.$4),
           title: Text(repo.$2),
           subtitle: Text(repo.$3),
-          trailing: Text(repo.$1),
+          trailing: SizedBox(
+            width: 80,
+            child: Text(
+              repo.$1,
+              overflow: TextOverflow.visible,
+            ),
+          ),
           onTap: () =>
               html.window.open(p.join(kGitHubPrefix, repo.$1, repo.$2), ''),
         );

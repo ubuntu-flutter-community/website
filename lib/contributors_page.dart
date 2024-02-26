@@ -4,6 +4,7 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'constants.dart';
 import 'contributor_grid.dart';
 import 'contributor_service.dart';
+import 'foot_note.dart';
 import 'header_lead.dart';
 import 'header_title.dart';
 import 'message_fab.dart';
@@ -38,6 +39,7 @@ class _ContributorsPageState extends State<ContributorsPage> {
     return Container(
       decoration: scaffoldGradient(context),
       child: Scaffold(
+        bottomNavigationBar: const FootNote(),
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
