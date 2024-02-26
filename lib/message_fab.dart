@@ -18,17 +18,26 @@ class MessageFab extends StatelessWidget {
       children: [
         ActionButton(
           onPressed: () => html.window.open(kGitHubOrgaLink, ''),
-          icon: const Icon(
-            TablerIcons.brand_github,
+          icon: const Padding(
+            padding: EdgeInsets.only(bottom: 3),
+            child: Icon(
+              TablerIcons.brand_github,
+            ),
           ),
         ),
         ActionButton(
           onPressed: () => html.window.open(kMail, ''),
-          icon: const Icon(TablerIcons.mail),
+          icon: const Padding(
+            padding: EdgeInsets.only(bottom: 3),
+            child: Icon(TablerIcons.mail),
+          ),
         ),
         ActionButton(
           onPressed: () => html.window.open(kDiscordLink, ''),
-          icon: const Icon(TablerIcons.brand_discord),
+          icon: const Padding(
+            padding: EdgeInsets.only(bottom: 3),
+            child: Icon(TablerIcons.brand_discord),
+          ),
         ),
       ],
     );

@@ -19,7 +19,7 @@ final kListTileShape = RoundedRectangleBorder(
   borderRadius: BorderRadius.circular(kYaruPagePadding / 2),
 );
 
-const kTitle = 'Ubuntu Flutter Community';
+const kAppTitle = 'Ubuntu Flutter Community';
 
 const kUfcOrgaName = 'ubuntu-flutter-community';
 
@@ -38,3 +38,6 @@ const kDiscordLink = 'https://discord.gg/vJgPV9Yn3n';
 const kWelcomeTitle = 'Changing the Ubuntu Desktop to a fluttery future';
 
 const kWelcomeButtonText = 'See our projects';
+
+const kBaseColor = Colors.grey;
+const kHighlightColor = Colors.white;

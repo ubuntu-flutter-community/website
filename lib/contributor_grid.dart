@@ -26,7 +26,7 @@ class _ContributorGridState extends State<ContributorGrid> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: const EdgeInsets.all(kPadding),
+      padding: const EdgeInsets.all(25),
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: kAvatarSize,
         mainAxisExtent: kAvatarSize,

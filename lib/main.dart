@@ -35,7 +35,7 @@ class _MainAppState extends State<MainApp> {
       },
     );
     return MaterialApp(
-      title: kTitle,
+      title: kAppTitle,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
