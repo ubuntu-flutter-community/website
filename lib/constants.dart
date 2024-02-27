@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yaru_widgets/constants.dart';
 
-const kPadding = 20.0;
-
 const kToolBarHeight = 60.0;
 
 const kAvatarSize = 60.0;
