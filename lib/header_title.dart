@@ -17,10 +17,14 @@ class HeaderTitle extends StatelessWidget {
       child: GestureDetector(
         onTap: () => Navigator.of(context).pushNamed('/'),
         child: Text(
-          width > 1000 ? kShortTitle : '',
+          width > 700
+              ? kAppTitle
+              : width > 400
+                  ? kShortTitle
+                  : '',
           overflow: TextOverflow.fade,
-          style: theme.textTheme.headlineLarge
-              ?.copyWith(fontWeight: FontWeight.w100),
+          style:
+              theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w100),
         ),
       ),
     );

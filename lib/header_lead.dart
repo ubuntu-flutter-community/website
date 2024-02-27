@@ -13,13 +13,13 @@ class HeaderLead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: kPadding),
+      padding: const EdgeInsets.all(kLeadingWidth / 8),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
           onTap: () => Navigator.of(context).pushNamed('/'),
           child: const Logo(
-            size: 100,
+            size: kLeadingWidth,
             duration: Duration.zero,
           ),
         ),
