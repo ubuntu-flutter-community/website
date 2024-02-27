@@ -3,11 +3,11 @@ import 'package:yaru_widgets/constants.dart';
 
 const kPadding = 20.0;
 
-const kToolBarHeight = 110.0;
+const kToolBarHeight = 60.0;
 
 const kAvatarSize = 60.0;
 
-const kLeadingWidth = 85.0;
+const kLeadingWidth = kToolBarHeight * 0.9;
 
 const kListTilePadding =
     EdgeInsets.only(left: kYaruPagePadding, right: kYaruPagePadding);
