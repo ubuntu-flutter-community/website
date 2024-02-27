@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yaru_widgets/constants.dart';
 
 import 'build_context_x.dart';
-import 'constants.dart';
 
 class TopMenuEntry extends StatelessWidget {
   const TopMenuEntry({
@@ -37,6 +37,6 @@ List<Widget> createTopMenu(BuildContext context) => [
         onPressed: () => Navigator.of(context).pushNamed('/contributors'),
       ),
       const SizedBox(
-        width: kPadding,
+        width: kYaruPagePadding,
       ),
     ];

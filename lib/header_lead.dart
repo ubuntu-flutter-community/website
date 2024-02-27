@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yaru_widgets/constants.dart';
 import 'constants.dart';
 import 'logo.dart';
 
@@ -13,7 +14,7 @@ class HeaderLead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(kLeadingWidth / 8),
+      padding: const EdgeInsets.only(left: kYaruPagePadding),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
