@@ -5,13 +5,7 @@ import 'package:yaru_widgets/constants.dart';
 import 'package:yaru_widgets/widgets.dart';
 
 import 'build_context_x.dart';
-import 'constants.dart';
-import 'foot_note.dart';
-import 'header_lead.dart';
-import 'header_title.dart';
-import 'message_fab.dart';
-import 'scaffold_gradient.dart';
-import 'top_menu_entry.dart';
+import 'sub_page.dart';
 
 class GettingStartedPage extends StatelessWidget {
   const GettingStartedPage({super.key});
@@ -19,40 +13,26 @@ class GettingStartedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = context.mq.size.width;
-    return Container(
-      decoration: scaffoldGradient(context),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          title: const HeaderTitle(),
-          backgroundColor: Colors.transparent,
-          toolbarHeight: kToolBarHeight,
-          leadingWidth: kLeadingWidth,
-          leading: const HeaderLead(),
-          actions: createTopMenu(context),
-        ),
-        body: Center(
-          child: FutureBuilder(
-            future: loadMarkdown(),
-            builder: (context, shot) {
-              if (!shot.hasData) {
-                return const Center(
-                  child: YaruCircularProgressIndicator(),
-                );
-              }
-
-              return Markdown(
-                padding: EdgeInsets.symmetric(
-                  vertical: kYaruPagePadding,
-                  horizontal: width < 700 ? kYaruPagePadding : width * 0.2,
-                ),
-                data: shot.data!,
+    return SubPage(
+      body: Center(
+        child: FutureBuilder(
+          future: loadMarkdown(),
+          builder: (context, shot) {
+            if (!shot.hasData) {
+              return const Center(
+                child: YaruCircularProgressIndicator(),
               );
-            },
-          ),
+            }
+
+            return Markdown(
+              padding: EdgeInsets.symmetric(
+                vertical: kYaruPagePadding,
+                horizontal: width < 700 ? kYaruPagePadding : width * 0.2,
+              ),
+              data: shot.data!,
+            );
+          },
         ),
-        bottomNavigationBar: const FootNote(),
-        floatingActionButton: const MessageFab(),
       ),
     );
   }
