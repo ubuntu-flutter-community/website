@@ -12,8 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_markdown: ^0.6.20
   flutter_tabler_icons: ^1.21.0
   github: ^9.23.0
+  http: ^1.2.0
   path: ^1.8.3
   shimmer: ^3.0.0
   ubuntu_service: ^0.3.1
