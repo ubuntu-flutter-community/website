@@ -39,3 +39,6 @@ const kWelcomeButtonText = 'See our projects';
 
 const kBaseColor = Colors.grey;
 const kHighlightColor = Colors.white;
+
+const kYaruTutorialMarkDown =
+    'https://raw.githubusercontent.com/ubuntu-flutter-community/yaru_tutorial/master/README.md';
