@@ -200,9 +200,9 @@ class ActionButton extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       color: theme.colorScheme.secondary,
       elevation: 4,
-      child: FloatingActionButton(
+      child: IconButton(
         onPressed: onPressed,
-        child: icon,
+        icon: icon,
       ),
     );
   }
