@@ -3,6 +3,7 @@ import 'package:github/github.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'constants.dart';
 import 'contributor_service.dart';
+import 'getting_started_page.dart';
 import 'globals.dart';
 import 'home_page.dart';
 import 'contributors_page.dart';
@@ -46,6 +47,7 @@ class _MainAppState extends State<MainApp> {
         '/': (context) => const HomePage(),
         '/contributors': (context) => const ContributorsPage(),
         '/projects': (context) => const ProjectsPage(),
+        '/gettingstarted': (context) => const GettingStartedPage(),
       },
     );
   }
