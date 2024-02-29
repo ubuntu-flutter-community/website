@@ -9,8 +9,21 @@ import 'build_context_x.dart';
 import 'constants.dart';
 import 'sub_page.dart';
 
-class GettingStartedPage extends StatelessWidget {
+class GettingStartedPage extends StatefulWidget {
   const GettingStartedPage({super.key});
+
+  @override
+  State<GettingStartedPage> createState() => _GettingStartedPageState();
+}
+
+class _GettingStartedPageState extends State<GettingStartedPage> {
+  late Future<String> _markdown;
+
+  @override
+  void initState() {
+    super.initState();
+    _markdown = loadMarkdown();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +31,18 @@ class GettingStartedPage extends StatelessWidget {
     return SubPage(
       body: Center(
         child: FutureBuilder(
-          future: loadMarkdown(),
-          builder: (context, shot) {
-            if (!shot.hasData) {
+          future: _markdown,
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(kYaruPagePadding),
+                  child: Text(snapshot.error.toString()),
+                ),
+              );
+            }
+
+            if (!snapshot.hasData) {
               return const Center(
                 child: YaruCircularProgressIndicator(),
               );
@@ -31,7 +53,7 @@ class GettingStartedPage extends StatelessWidget {
                 vertical: kYaruPagePadding,
                 horizontal: width < 700 ? kYaruPagePadding : width * 0.18,
               ),
-              data: shot.data!,
+              data: snapshot.data!,
               selectable: true,
               syntaxHighlighter: DartSH(),
             );
