@@ -6,6 +6,12 @@ import 'constants.dart';
 final repositories = <(String, String, String, IconData)>{
   (
     kUfcOrgaName,
+    'samples',
+    'Template Projects to get you started!',
+    YaruIcons.rule_and_pen,
+  ),
+  (
+    kUfcOrgaName,
     'musicpod',
     'Local Music, Radio and Podcast Player',
     YaruIcons.music_note,

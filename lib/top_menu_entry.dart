@@ -36,10 +36,6 @@ List<Widget> createTopMenu(BuildContext context) => [
         text: 'Contributors',
         onPressed: () => Navigator.of(context).pushNamed('/contributors'),
       ),
-      TopMenuEntry(
-        text: 'Getting Started',
-        onPressed: () => Navigator.of(context).pushNamed('/gettingstarted'),
-      ),
       const SizedBox(
         width: kYaruPagePadding,
       ),
