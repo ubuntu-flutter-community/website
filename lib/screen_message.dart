@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'build_context_x.dart';
-import 'constants.dart';
 
 class ScreenMessage extends StatefulWidget {
   const ScreenMessage({
@@ -33,7 +32,6 @@ class _ScreenMessageState extends State<ScreenMessage> {
   @override
   Widget build(BuildContext context) {
     final size = context.mq.size;
-    final height = size.height;
     final width = size.width;
 
     final smallWindow = width < 600;
@@ -99,11 +97,7 @@ class _ScreenMessageState extends State<ScreenMessage> {
     return AnimatedOpacity(
       opacity: _opacity,
       duration: const Duration(seconds: 3),
-      child: Padding(
-        padding: EdgeInsets.only(
-          top: (height / 2) - (2.3 * kToolBarHeight),
-          bottom: height / 2,
-        ),
+      child: Center(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
