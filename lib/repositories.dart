@@ -5,6 +5,18 @@ import 'constants.dart';
 
 final repositories = <(String, String, String, IconData)>{
   (
+    kUbuntuOrganName,
+    'yaru.dart',
+    'The iconic Flutter widget and theme suite for Ubuntu Desktop applications',
+    YaruIcons.color_select,
+  ),
+  (
+    kUfcOrgaName,
+    'yaru_tutorial',
+    'Tutorials how to create a Flutter app with Ubuntu Yaru Design',
+    YaruIcons.ubuntu_logo_simple,
+  ),
+  (
     kUfcOrgaName,
     'samples',
     'Template Projects to get you started!',
@@ -27,12 +39,6 @@ final repositories = <(String, String, String, IconData)>{
     'envelope',
     'E-Mail app for the Ubuntu Desktop',
     YaruIcons.mail,
-  ),
-  (
-    kUbuntuOrganName,
-    'yaru.dart',
-    'The iconic Flutter widget and theme suite for Ubuntu Desktop applications',
-    YaruIcons.color_select,
   ),
   (
     kUbuntuOrganName,
