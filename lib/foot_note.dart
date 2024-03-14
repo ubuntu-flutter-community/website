@@ -13,17 +13,22 @@ class FootNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = context.theme.textTheme.labelSmall
-        ?.copyWith(color: Colors.white.withOpacity(0.7));
+        ?.copyWith(color: context.theme.colorScheme.onSurface);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(
-          child: Text(
-            '$kAppTitle · 2024 · ',
-            style: style,
-            overflow: TextOverflow.fade,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(2),
+            onTap: () => Navigator.of(context).pushNamed('/legal'),
+            child: Text(
+              'Legal note',
+              style: style,
+              overflow: TextOverflow.fade,
+            ),
           ),
         ),
+        const Text(' · '),
         Flexible(
           child: InkWell(
             borderRadius: BorderRadius.circular(2),

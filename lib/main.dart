@@ -8,6 +8,7 @@ import 'home_page.dart';
 import 'contributors_page.dart';
 import 'package:yaru/yaru.dart';
 
+import 'legal_page.dart';
 import 'projects_page.dart';
 
 Future<void> main() async {
@@ -38,7 +39,7 @@ class _MainAppState extends State<MainApp> {
       title: kAppTitle,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      theme: yaruLight,
       darkTheme: yaruDark.copyWith(
         pageTransitionsTheme: pTT,
       ),
@@ -46,6 +47,7 @@ class _MainAppState extends State<MainApp> {
         '/': (context) => const HomePage(),
         '/contributors': (context) => const ContributorsPage(),
         '/projects': (context) => const ProjectsPage(),
+        '/legal': (context) => const LegalPage(),
       },
     );
   }
