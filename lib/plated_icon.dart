@@ -1,4 +1,4 @@
-import 'constants.dart';
+import 'build_context_x.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -21,8 +21,8 @@ class PlatedIcon extends StatelessWidget {
     return Opacity(
       opacity: 0.7,
       child: Shimmer.fromColors(
-        baseColor: kBaseColor,
-        highlightColor: kHighlightColor,
+        baseColor: context.baseColor,
+        highlightColor: context.highlightColor,
         child: InkWell(
           onTap: onTap,
           borderRadius:

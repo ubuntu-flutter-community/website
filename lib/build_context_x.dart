@@ -6,6 +6,5 @@ extension BuildContextX on BuildContext {
   ThemeData get theme => Theme.of(this);
   MediaQueryData get mq => MediaQuery.of(this);
   Color get baseColor => theme.colorScheme.onSurface;
-  Color get highlightColor =>
-      theme.colorScheme.onSurface.scale(lightness: isLight ? 0.6 : -0.4);
+  Color get highlightColor => baseColor.scale(lightness: isLight ? 0.6 : -0.4);
 }

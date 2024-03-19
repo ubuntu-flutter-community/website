@@ -11,7 +11,7 @@ BoxDecoration scaffoldGradient(BuildContext context) {
       colors: context.isLight
           ? [
               Colors.white,
-              Colors.white.scale(lightness: -0.2),
+              Colors.white,
             ]
           : [
               const Color(0xFF77216F).scale(lightness: -0.8),

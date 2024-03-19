@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:yaru_widgets/widgets.dart';
 
+import 'build_context_x.dart';
 import 'constants.dart';
 import 'plated_icon.dart';
 import 'repositories.dart';
@@ -36,8 +37,8 @@ class HomePage extends StatelessWidget {
               child: ScreenMessage(
                 title: const Text(kWelcomeTitle),
                 subTitle: Shimmer.fromColors(
-                  baseColor: kBaseColor,
-                  highlightColor: kHighlightColor,
+                  baseColor: context.baseColor,
+                  highlightColor: context.highlightColor,
                   child: InkWell(
                     borderRadius: BorderRadius.circular(5),
                     onTap: () => Navigator.of(context).pushNamed('/projects'),
@@ -58,8 +59,8 @@ class HomePage extends StatelessWidget {
                   ),
                   title: Text(e.$2),
                   subTitle: Shimmer.fromColors(
-                    baseColor: kBaseColor,
-                    highlightColor: kHighlightColor,
+                    baseColor: context.baseColor,
+                    highlightColor: context.highlightColor,
                     child: InkWell(
                       borderRadius: BorderRadius.circular(5),
                       onTap: onTap,
