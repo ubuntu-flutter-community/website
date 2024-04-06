@@ -60,6 +60,7 @@ class _LogoState extends State<Logo> with SingleTickerProviderStateMixin {
             radius: widget.size / 10,
             child: Icon(
               YaruIcons.ubuntu_logo_simple,
+              color: Colors.white,
               size: (widget.size / 10) * 1.5,
             ),
           ),

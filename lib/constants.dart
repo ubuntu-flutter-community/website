@@ -42,3 +42,7 @@ const kHighlightColor = Colors.white;
 
 const kYaruTutorialMarkDown =
     'https://raw.githubusercontent.com/ubuntu-flutter-community/yaru_tutorial/master/README.md';
+
+const kLegalNote = 'Ubuntu is a registered trademark of Canonical Ltd';
+const kLegalLabel =
+    'Ubuntu Flutter Community is not officially endorsed by Canonical Ltd';

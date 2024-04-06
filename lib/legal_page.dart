@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
 import 'sub_page.dart';
 
 class LegalPage extends StatelessWidget {
@@ -12,8 +13,8 @@ class LegalPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('Ubuntu is a registered trademark of Canonical Ltd'),
-            const Text('Ubuntu Flutter Community is not Canonical Ltd'),
+            const Text(kLegalNote),
+            const Text(kLegalLabel),
           ]
               .map(
                 (e) => Padding(
