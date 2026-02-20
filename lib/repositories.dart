@@ -12,6 +12,18 @@ final repositories = <(String, String, String, IconData)>{
   ),
   (
     kUfcOrgaName,
+    'musicpod',
+    'Local Music, Radio and Podcast Player',
+    YaruIcons.music_note,
+  ),
+  (
+    kUfcOrgaName,
+    'nebuchadnezzar',
+    'Matrix Client for the Linux Desktop',
+    YaruIcons.chat_bubble,
+  ),
+  (
+    kUfcOrgaName,
     'yaru_tutorial',
     'Tutorials how to create a Flutter app with Ubuntu Yaru Design',
     YaruIcons.ubuntu_logo_simple,
@@ -21,12 +33,6 @@ final repositories = <(String, String, String, IconData)>{
     'samples',
     'Template Projects to get you started!',
     YaruIcons.rule_and_pen,
-  ),
-  (
-    kUfcOrgaName,
-    'musicpod',
-    'Local Music, Radio and Podcast Player',
-    YaruIcons.music_note,
   ),
   (
     kUfcOrgaName,
